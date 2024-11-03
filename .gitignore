@@ -1,0 +1,6 @@
+.# Compiled source #
+*.TMP
+*.dll
+*.user
+*.pyproject.user
+__pycache__/
