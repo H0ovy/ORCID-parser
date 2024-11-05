@@ -30,7 +30,7 @@ class Ui_MainWinodw(object):
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.label = QLabel(self.centralwidget)
         self.label.setObjectName(u"label")
-        self.label.setPixmap(QPixmap(u"ORCIDlogo.png"))
+        self.label.setPixmap(QPixmap(u"pics/ORCIDlogo.png"))
 
         self.verticalLayout.addWidget(self.label)
 
@@ -40,16 +40,21 @@ class Ui_MainWinodw(object):
 
         self.verticalLayout.addWidget(self.lineEdit)
 
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
+        self.pushButtonEnter = QPushButton(self.centralwidget)
+        self.pushButtonEnter.setObjectName(u"pushButtonEnter")
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.pushButtonEnter)
 
         self.textBrowser = QTextBrowser(self.centralwidget)
         self.textBrowser.setObjectName(u"textBrowser")
         self.textBrowser.setStyleSheet(u"font: 12pt \"Arial\";")
 
         self.verticalLayout.addWidget(self.textBrowser)
+
+        self.pushButtonSave = QPushButton(self.centralwidget)
+        self.pushButtonSave.setObjectName(u"pushButtonSave")
+
+        self.verticalLayout.addWidget(self.pushButtonSave)
 
         MainWinodw.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWinodw)
@@ -64,6 +69,7 @@ class Ui_MainWinodw(object):
     def retranslateUi(self, MainWinodw):
         MainWinodw.setWindowTitle(QCoreApplication.translate("MainWinodw", u"ORCID parser", None))
         self.label.setText("")
-        self.pushButton.setText(QCoreApplication.translate("MainWinodw", u"Enter", None))
+        self.pushButtonEnter.setText(QCoreApplication.translate("MainWinodw", u"Enter", None))
+        self.pushButtonSave.setText(QCoreApplication.translate("MainWinodw", u"Save", None))
     # retranslateUi
 

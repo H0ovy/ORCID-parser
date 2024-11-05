@@ -19,12 +19,12 @@ from PySide6.QtWidgets import (QApplication, QLabel, QLineEdit, QMainWindow,
     QPushButton, QSizePolicy, QStatusBar, QTextBrowser,
     QVBoxLayout, QWidget)
 
-class Ui_ORCID_parser(object):
-    def setupUi(self, ORCID_parser):
-        if not ORCID_parser.objectName():
-            ORCID_parser.setObjectName(u"ORCID_parser")
-        ORCID_parser.resize(428, 600)
-        self.centralwidget = QWidget(ORCID_parser)
+class Ui_MainWinodw(object):
+    def setupUi(self, MainWinodw):
+        if not MainWinodw.objectName():
+            MainWinodw.setObjectName(u"MainWinodw")
+        MainWinodw.resize(428, 600)
+        self.centralwidget = QWidget(MainWinodw)
         self.centralwidget.setObjectName(u"centralwidget")
         self.verticalLayout = QVBoxLayout(self.centralwidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -40,10 +40,10 @@ class Ui_ORCID_parser(object):
 
         self.verticalLayout.addWidget(self.lineEdit)
 
-        self.pushButton = QPushButton(self.centralwidget)
-        self.pushButton.setObjectName(u"pushButton")
+        self.pushButtonEnter = QPushButton(self.centralwidget)
+        self.pushButtonEnter.setObjectName(u"pushButtonEnter")
 
-        self.verticalLayout.addWidget(self.pushButton)
+        self.verticalLayout.addWidget(self.pushButtonEnter)
 
         self.textBrowser = QTextBrowser(self.centralwidget)
         self.textBrowser.setObjectName(u"textBrowser")
@@ -51,19 +51,25 @@ class Ui_ORCID_parser(object):
 
         self.verticalLayout.addWidget(self.textBrowser)
 
-        ORCID_parser.setCentralWidget(self.centralwidget)
-        self.statusbar = QStatusBar(ORCID_parser)
+        self.pushButtonSave = QPushButton(self.centralwidget)
+        self.pushButtonSave.setObjectName(u"pushButtonSave")
+
+        self.verticalLayout.addWidget(self.pushButtonSave)
+
+        MainWinodw.setCentralWidget(self.centralwidget)
+        self.statusbar = QStatusBar(MainWinodw)
         self.statusbar.setObjectName(u"statusbar")
-        ORCID_parser.setStatusBar(self.statusbar)
+        MainWinodw.setStatusBar(self.statusbar)
 
-        self.retranslateUi(ORCID_parser)
+        self.retranslateUi(MainWinodw)
 
-        QMetaObject.connectSlotsByName(ORCID_parser)
+        QMetaObject.connectSlotsByName(MainWinodw)
     # setupUi
 
-    def retranslateUi(self, ORCID_parser):
-        ORCID_parser.setWindowTitle(QCoreApplication.translate("ORCID_parser", u"MainWinodw", None))
+    def retranslateUi(self, MainWinodw):
+        MainWinodw.setWindowTitle(QCoreApplication.translate("MainWinodw", u"ORCID parser", None))
         self.label.setText("")
-        self.pushButton.setText(QCoreApplication.translate("ORCID_parser", u"Enter", None))
+        self.pushButtonEnter.setText(QCoreApplication.translate("MainWinodw", u"Enter", None))
+        self.pushButtonSave.setText(QCoreApplication.translate("MainWinodw", u"Save", None))
     # retranslateUi
 
