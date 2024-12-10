@@ -4,3 +4,7 @@
 *.user
 *.pyproject.user
 __pycache__/
+build/
+dist/
+venv/
+*.spec

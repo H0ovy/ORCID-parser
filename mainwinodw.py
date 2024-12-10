@@ -59,6 +59,7 @@ class MainWinodw(QMainWindow):
         except NoSuchElementException:
             self.ui.textBrowser.append("A problem occured during the search\nplease check your input data")
             mainText += "A problem occured during the search\nplease check your input data"
+            driver.quit()
             return
 
         article_name = driver.find_elements(By.CLASS_NAME, "work-title")
@@ -67,6 +68,7 @@ class MainWinodw(QMainWindow):
             self.ui.textBrowser.append(author_name.text)
             self.ui.textBrowser.append("\nOnly the name was found")
             mainText += (author_name.text + "\nOnly the name was found")
+            driver.quit()
             return
 
 
@@ -92,6 +94,7 @@ class MainWinodw(QMainWindow):
             for i in range(len(article_name)):
                 self.ui.textBrowser.append("- " + article_name[i].text + "\n")
                 mainText += ("- " + article_name[i].text + "\n")
+            driver.quit()
             return
 
         self.ui.textBrowser.append(author_name.text + "\n")
